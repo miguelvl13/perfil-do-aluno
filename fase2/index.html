@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Perfil do Aluno - Miguel Veloso - Fase 2</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <h1>Perfil do Aluno</h1>
+
+  <table border="0" style="width: 100%; border-collapse: collapse;">
+    <tr>
+      <td rowspan="2" style="width: 220px; text-align: center;">
+        <img id="fotoPerfil" src="miguelfoto1.jpg" alt="Foto de Perfil" width="200" />
+        <br />
+        <button onclick="trocarFoto()">Trocar Foto</button>
+        <div id="indicadores">
+          <span class="bolinha ativa" onclick="trocarFotoPara(0)"></span>
+          <span class="bolinha" onclick="trocarFotoPara(1)"></span>
+        </div>
+      </td>
+      <td>
+        <p><strong>Nome Completo:</strong> Miguel Veloso Serafim</p>
+        <p><strong>RA:</strong> 321120616</p>
+        <p><strong>Curso e Período Atual:</strong> Sistemas de Informação - 8º Período</p>
+        <p><strong>Endereço:</strong> Rua Poço Branco, 54. São Gabriel, Belo Horizonte-MG</p>
+        <p><strong>Email:</strong> miguelveloso2010@gmail.com</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h2>Perfil Pessoal</h2>
+        <p>
+          Sou uma pessoa extrovertida, gosto de sair com os amigos, curtir momentos com meus pets e estou sempre conectado com o que acontece no mundo. Amo tecnologia e computação, e também sou entusiasta em temas ligados à política e sociedade.
+        </p>
+
+        <h2>Perfil Profissional/Acadêmico</h2>
+        <p>
+          Iniciei minha graduação em Sistemas de Informação em 2021 e, desde então, venho desenvolvendo experiência na área de suporte técnico especializado. Atualmente, trabalho com automação de postos de combustível, prestando suporte ao sistema AutoSystem. Minhas atividades incluem desde a análise e correção de dados no banco PostgreSQL, identificação e solução de erros no sistema, até instalação e configuração remota de equipamentos como impressoras, máquinas de cartão e drivers.
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <h2>UCs já cursadas</h2>
+  <ul>
+    <li>Ambientes computacionais e conectividade</li>
+    <li>Análise de dados e big data</li>
+    <li>Arquiteturas empresariais</li>
+    <li>Direito Digital</li>
+    <li>Gestão e qualidade de software</li>
+    <li>Governança e serviços de TI</li>
+    <li>Inovação, sustentabilidade e competitividade empresarial</li>
+    <li>Inteligência artificial</li>
+    <li>Modelagem de software</li>
+    <li>Modelos, métodos e técnicas da engenharia de software</li>
+    <li>Programação de soluções computacionais</li>
+    <li>Projetos e processos de TI</li>
+    <li>Sistemas computacionais e segurança</li>
+  </ul>
+
+  <h2>Redes Sociais</h2>
+
+  <table class="borda-linkedin" style="width: fit-content;">
+    <tr>
+      <td>
+        <a href="https://www.linkedin.com/in/miguel-veloso-a57653244/" target="_blank">LinkedIn</a>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    let fotos = ["miguelfoto1.jpg", "miguelfoto2.jpg"];
+    let index = 0;
+
+    function trocarFoto() {
+      index = (index + 1) % fotos.length;
+      atualizarFoto();
+    }
+
+    function trocarFotoPara(i) {
+      index = i;
+      atualizarFoto();
+    }
+
+    function atualizarFoto() {
+      document.getElementById("fotoPerfil").src = fotos[index];
+      let bolinhas = document.querySelectorAll(".bolinha");
+      bolinhas.forEach((b, i) => {
+        b.classList.toggle("ativa", i === index);
+      });
+    }
+  </script>
+</body>
+</html>
+
+

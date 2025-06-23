@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #7f9dda;
+    color: #333;
+    margin: 20px;
+  }
+  
+  h1 {
+    color: #ffffff;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: bold; 
+    margin-top: 10px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 15px;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 0 10px #ccc;
+  }
+  
+  img {
+    border-radius: 10px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #38abe4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #084d77;
+  }
+  
+  .borda-linkedin, 
+  .borda-linkedin th, 
+  .borda-linkedin td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+  }
+  
+  #indicadores {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .bolinha {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .bolinha.ativa {
+    background-color: #0e639c;
+  }
+  
